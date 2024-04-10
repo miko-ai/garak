@@ -70,8 +70,8 @@ class Evaluator:
                                 hitlog_filename = (
                                     _config.reporting.report_prefix + ".hitlog.jsonl"
                                 )
-                            logging.info("hit log in %s", hitlog_filename)
-                            _config.transient.hitlogfile = open(
+                        logging.info("hit log in %s", hitlog_filename)
+                        _config.transient.hitlogfile = open(
                                 hitlog_filename,
                                 "w",
                                 buffering=1,
