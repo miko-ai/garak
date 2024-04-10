@@ -74,7 +74,7 @@ class Evaluator:
                         _config.transient.hitlogfile = open(
                                 hitlog_filename,
                                 "w",
-                                buffering=0,
+                                buffering=1,
                                 encoding="utf-8",
                             )
 
