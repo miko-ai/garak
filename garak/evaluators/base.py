@@ -89,8 +89,7 @@ class Evaluator:
                                 trigger = attempt.notes["triggers"][0]
                             else:
                                 trigger = attempt.notes["triggers"]
-                        _config.transient.hitlogfile.write(
-                            json.dumps(
+                        s=json.dumps(
                                 {
                                     "goal": attempt.goal,
                                     "prompt": attempt.prompt,
@@ -105,8 +104,9 @@ class Evaluator:
                                     "probe": self.probename,
                                     "detector": detector,
                                     "generations_per_prompt": _config.run.generations,
-                                }
-                            )
+                                })
+                        print(s)
+                        _config.transient.hitlogfile.write(s
                             + "\n"  # generator,probe,prompt,trigger,result,detector,score,run id,attemptid,
                         )
 
