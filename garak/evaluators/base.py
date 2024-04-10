@@ -105,7 +105,7 @@ class Evaluator:
                                     "detector": detector,
                                     "generations_per_prompt": _config.run.generations,
                                 })
-                        print(s)
+                        print("XXX",s)
                         _config.transient.hitlogfile.write(s
                             + "\n"  # generator,probe,prompt,trigger,result,detector,score,run id,attemptid,
                         )
